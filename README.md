@@ -100,7 +100,8 @@ To use the custom inference, You must follow the rules.
 
 Sagemaker inference follow the model.tar.gz
 
-``` model.tar.gz
+``` 
+model.tar.gz
 ├── /code
 │   └── inference.py
 ├── tokenizer.json
