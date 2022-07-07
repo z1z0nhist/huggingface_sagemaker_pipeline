@@ -20,6 +20,30 @@ Your custom Huggingface model for MLOps pipeline in sagemaker.
 # Sagemaker Environment variables
 [Environment variables](https://github.com/aws/sagemaker-training-toolkit/blob/master/ENVIRONMENT_VARIABLES.md)
 
+# Some tips (To understand the path)
+
+## in ProcessingStep
+
+* inputs (List type)
+```
+source(S3) -> destination(container instance)
+```
+* outputs (List type)
+```
+source(container instance) -> destination(S3)
+```
+## in TrainingStep
+
+* inputs (Dict type)
+
+Only suport train, test variables
+```
+source(Your sagemaker S3 URI, made at the processing step) -> destination(container instance)
+```
+Also, When the save the model, Use it as trainer.save_model(os.environ["SM_MODEL_DIR"])
+
+then you can check the model saved at sagemaker s3
+
 # Custom script processing step
 ```
 from sagemaker.processing import ScriptProcessor
@@ -69,3 +93,21 @@ step_process = ProcessingStep(
     code=f'{YOUR SOURCE PATH}/Preprocess.py',
 )
 ```
+
+# Custom script inference step
+
+To use the custom inference, You must follow the rules.
+
+Sagemaker inference follow the model.tar.gz
+
+``` model.tar.gz
+├── /code
+│   └── inference.py
+├── tokenizer.json
+├── tokenizer_config.json
+├── config.json
+├── vocab.txt
+└── pytorch_model.bin
+``` 
+
+[custom_inference_script](https://github.com/huggingface/notebooks/blob/main/sagemaker/17_custom_inference_script/sagemaker-notebook.ipynb)
