@@ -40,7 +40,7 @@ Only suport train, test variables
 ```
 source(Your sagemaker S3 URI, made at the processing step) -> destination(container instance)
 ```
-Also, When the save the model, Use it as trainer.save_model(os.environ["SM_MODEL_DIR"])
+Also, When the save the model, Use it trainer.save_model(os.environ["SM_MODEL_DIR"])
 
 then you can check the model saved at sagemaker s3
 
