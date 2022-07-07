@@ -2,6 +2,12 @@
 
 Your custom Huggingface model for MLOps pipeline in sagemaker.
 
+# overview
+![overview](./img/overview.png)
+
+# pipeline
+![pipeline](./img/pipeline.png)
+
 # Prepare
 
 1. Preprocess dockerfile
