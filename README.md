@@ -113,7 +113,7 @@ model.tar.gz
 
 [custom_inference_script](https://github.com/huggingface/notebooks/blob/main/sagemaker/17_custom_inference_script/sagemaker-notebook.ipynb)
 
-# S3 
+# S3 Directory
 ``` 
 S3
 ├── /code
