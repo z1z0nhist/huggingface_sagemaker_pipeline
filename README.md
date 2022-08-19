@@ -45,7 +45,7 @@ Also, When the save the model, Use it trainer.save_model(os.environ["SM_MODEL_DI
 then you can check the model saved at sagemaker s3
 
 # Custom script processing step
-```
+```python
 from sagemaker.processing import ScriptProcessor
 
 processing_output_destination = 'YOUR S3 PATH'
