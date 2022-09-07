@@ -126,22 +126,3 @@ S3
 └── /test
     └── test.csv
 ``` 
-
-# sagemaker container
-```
-/opt/ml
-├── input
-│   ├── config
-│   │   ├── hyperparameters.json
-│   │   └── resourceConfig.json
-│   └── data
-│       └── <channel_name>
-│           └── <input data>
-├── model
-│
-├── code
-│
-├── output
-│
-└── failure
-```
