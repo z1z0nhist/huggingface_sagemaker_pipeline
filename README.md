@@ -126,3 +126,22 @@ S3
 └── /test
     └── test.csv
 ``` 
+
+# train container Structure
+```
+/opt/ml
+├── input
+│   ├── config
+│   │   ├── hyperparameters.json
+│   │   └── resourceConfig.json
+│   └── data
+│       └── <channel_name>
+│           └── <input data>
+├── model
+│
+├── code
+│
+├── output
+│
+└── failure
+```
